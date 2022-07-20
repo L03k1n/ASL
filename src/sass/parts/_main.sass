@@ -26,6 +26,8 @@
         align-items: flex-end
         padding-left: 5.2vw
         margin-top: 2.6vw
+        .bottom
+            display: none
     &__black
         background-color: black
         padding: 3.8vw 3.8vw 4vw 4.2vw
@@ -74,3 +76,41 @@
         border-top: 1px #E9E9E9 solid
         margin-top: 2.9vw
         width: 31.5vw
+@media (max-width: 768px)
+    .main
+        &__bottom
+            flex-direction: column-reverse
+        &__logos
+            display: none
+        &__bottom
+            padding: 0
+            .container
+                display: none
+            .bottom
+                display: block
+                margin-top: 8vw
+                svg
+                    max-height: 4vw
+                    max-width: 17.3vw
+        &__black
+            width: 91%
+        &__paragraph
+            font-size: 1.8vw
+            max-width: 59vw
+        &__button
+            height: 4.6vw
+            width: 17.1vw
+            font-size: 1.5vw
+@media (max-width: 576px)
+    .main
+        margin-top: 9.3vw
+@media (max-width: 425px)
+    .main
+        &__black
+            height: 14.5vw
+        &__paragraph
+            font-size: 2.2vw
+            max-width: 65vw
+        &__button
+            width: 24.1vw
+            font-size: 2.3vw

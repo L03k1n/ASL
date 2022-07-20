@@ -34,6 +34,9 @@
   padding-left: 5.2vw;
   margin-top: 2.6vw;
 }
+.main__bottom .bottom {
+  display: none;
+}
 .main__black {
   background-color: black;
   padding: 3.8vw 3.8vw 4vw 4.2vw;
@@ -91,6 +94,58 @@
   width: 31.5vw;
 }
 
+@media (max-width: 768px) {
+  .main__bottom {
+    flex-direction: column-reverse;
+  }
+  .main__logos {
+    display: none;
+  }
+  .main__bottom {
+    padding: 0;
+  }
+  .main__bottom .container {
+    display: none;
+  }
+  .main__bottom .bottom {
+    display: block;
+    margin-top: 8vw;
+  }
+  .main__bottom .bottom svg {
+    max-height: 4vw;
+    max-width: 17.3vw;
+  }
+  .main__black {
+    width: 91%;
+  }
+  .main__paragraph {
+    font-size: 1.8vw;
+    max-width: 59vw;
+  }
+  .main__button {
+    height: 4.6vw;
+    width: 17.1vw;
+    font-size: 1.5vw;
+  }
+}
+@media (max-width: 576px) {
+  .main {
+    margin-top: 9.3vw;
+  }
+}
+@media (max-width: 425px) {
+  .main__black {
+    height: 14.5vw;
+  }
+  .main__paragraph {
+    font-size: 2.2vw;
+    max-width: 65vw;
+  }
+  .main__button {
+    width: 24.1vw;
+    font-size: 2.3vw;
+  }
+}
 @font-face {
   font-family: "Gilroy-Regular";
   src: url("../fonts/Gilroy-Regular.ttf");
@@ -188,6 +243,30 @@
   font-family: "Gilroy-Regular";
   font-size: 0.7vw;
 }
+.header__links-menu {
+  color: black;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin: 0px 1.6vw;
+  text-decoration: none;
+  font-family: "Gilroy-Medium";
+  font-size: 0.8vw;
+}
+.header__links-menu:visited {
+  color: black;
+  text-decoration: none;
+}
+.header__contact-us-menu {
+  border: 0.1vw black solid;
+  background-color: white;
+  border-radius: 35px;
+  width: 11.5vw;
+  height: 2.2vw;
+  margin: 0px 1.5vw;
+  font-family: "Gilroy-Regular";
+  font-size: 0.7vw;
+}
 .header__line-block {
   width: 1.5vw;
   height: 0.6vw;
@@ -196,6 +275,8 @@
   justify-content: space-between;
   align-items: flex-end;
   margin: 0px 1.6vw;
+  cursor: pointer;
+  transition: 0.3s;
 }
 .header__border-top {
   width: 1.5vw;
@@ -215,12 +296,124 @@
   width: 4.5vw;
   border-top: 1px #E9E9E9 solid;
 }
-
-html, body {
-  margin: 0;
+.header__line-block-active {
+  transform: rotate(90deg);
+  z-index: 99;
+}
+.header__menu {
+  height: 35vh;
+  width: 30vw;
+  position: fixed;
+  right: -100%;
+  top: 0%;
+  bottom: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  transition: 0.3s;
+}
+.header__menu div {
+  height: 6em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__active {
+  right: 0%;
+  z-index: 98;
 }
 
-body {
-  overflow-x: hidden;
+@media (max-width: 992px) {
+  .header__logo {
+    font-size: 2.4vw;
+  }
+  .header__description {
+    font-size: 1vw;
+  }
+  .header__links {
+    font-size: 1.1vw;
+  }
+  .header__contact-us {
+    font-size: 1.1vw;
+  }
+  .header__border-top {
+    border-top: 0.2vw black solid;
+  }
+  .header__border-bottom {
+    border-bottom: 0.2vw black solid;
+  }
+  .header__links-menu {
+    font-size: 1.5vw;
+  }
+  .header__contact-us-menu {
+    font-size: 1.5vw;
+    width: 15.5vw;
+    height: 3.2vw;
+  }
+}
+@media (max-width: 768px) {
+  .header__links {
+    display: none;
+  }
+  .header__contact-us {
+    display: none;
+  }
+  .header__logo {
+    font-size: 3vw;
+  }
+  .header__description {
+    font-size: 1.8vw;
+  }
+  .header__border-top {
+    width: 2.5vw;
+  }
+  .header__border-bottom {
+    width: 1.8vw;
+  }
+  .header__line-block {
+    height: 1.5vw;
+  }
+}
+@media (max-width: 576px) {
+  .header__logo {
+    font-size: 4vw;
+  }
+  .header__description {
+    font-size: 2.2vw;
+  }
+  .header__left-block {
+    height: 9.3vw;
+  }
+  .header__menu {
+    width: 50vw;
+  }
+  .header__contact-us-menu {
+    font-size: 2.5vw;
+    width: 24.5vw;
+    height: 6.2vw;
+  }
+  .header__links-menu {
+    font-size: 2.5vw;
+  }
+  .header__menu div {
+    height: 8em;
+  }
+  .header__border-top {
+    width: 3.5vw;
+  }
+  .header__border-bottom {
+    width: 2.8vw;
+  }
+}
+@media (max-width: 375px) {
+  .header__menu div {
+    height: 7em;
+  }
+}
+html, body {
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */

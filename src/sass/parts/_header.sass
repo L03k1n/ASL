@@ -50,6 +50,27 @@
         margin: 0px 1.5vw
         font-family: 'Gilroy-Regular'
         font-size: 0.7vw
+    &__links-menu
+        color: black
+        cursor: pointer
+        outline: none
+        border: none
+        margin: 0px 1.6vw
+        text-decoration: none
+        font-family: 'Gilroy-Medium'
+        font-size: 0.8vw
+        &:visited
+            color: black
+            text-decoration: none
+    &__contact-us-menu
+        border: 0.1vw black solid
+        background-color: white
+        border-radius: 35px
+        width: 11.5vw
+        height: 2.2vw
+        margin: 0px 1.5vw
+        font-family: 'Gilroy-Regular'
+        font-size: 0.7vw
     &__line-block
         width: 1.5vw
         height: 0.6vw
@@ -58,6 +79,8 @@
         justify-content: space-between
         align-items: flex-end
         margin: 0px 1.6vw
+        cursor: pointer
+        transition: .3s
     &__border-top
         width: 1.5vw
         border-top: 0.15vw black solid
@@ -72,3 +95,93 @@
     &__horizontal-line
         width: 4.5vw
         border-top: 1px #E9E9E9 solid
+    &__line-block-active
+        transform: rotate(90deg)
+        z-index: 99
+    &__menu
+        height: 35vh
+        width: 30vw
+        position: fixed
+        right: -100%
+        top: 0%
+        bottom: 0%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        background-color: white
+        transition: .3s
+        div
+            height: 6em
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: center
+    &__active
+        right: 0%
+        z-index: 98
+@media (max-width: 992px)
+    .header
+        &__logo
+            font-size: 2.4vw
+        &__description
+            font-size: 1vw
+        &__links
+            font-size: 1.1vw
+        &__contact-us
+            font-size: 1.1vw
+        &__border-top
+            border-top: 0.2vw black solid
+        &__border-bottom
+            border-bottom: 0.2vw black solid
+        &__links-menu
+            font-size: 1.5vw
+        &__contact-us-menu
+            font-size: 1.5vw
+            width: 15.5vw
+            height: 3.2vw
+
+@media (max-width: 768px)
+    .header
+        &__links
+            display: none
+        &__contact-us
+            display: none
+        &__logo
+            font-size: 3vw
+        &__description
+            font-size: 1.8vw
+        &__border-top
+            width: 2.5vw
+        &__border-bottom
+            width: 1.8vw
+        &__line-block
+            height: 1.5vw
+@media (max-width: 576px)
+    .header
+        &__logo
+            font-size: 4vw
+        &__description
+            font-size: 2.2vw
+        &__left-block
+            height: 9.3vw
+        &__menu
+            width: 50vw
+        &__contact-us-menu
+            font-size: 2.5vw
+            width: 24.5vw
+            height: 6.2vw
+        &__links-menu
+            font-size: 2.5vw
+        &__menu
+            div
+                height: 8em
+        &__border-top
+            width: 3.5vw
+        &__border-bottom
+            width: 2.8vw
+@media (max-width: 375px)
+    .header
+        &__menu
+            div
+                height: 7em
