@@ -1,0 +1,226 @@
+.container {
+  margin: 0 auto;
+  max-width: 87.5vw;
+}
+
+.main {
+  background-image: url("../img/main-background.png");
+  background-size: 87.5vw 31.3vw;
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  padding-top: 5.5vw;
+  margin-top: 6.3vw;
+}
+.main__logos {
+  width: 43.8vw;
+}
+.main__title {
+  font-size: 13vw;
+  color: white;
+  line-height: 9.9vw;
+  font-family: "Gilroy-Medium";
+  font-weight: 700;
+  max-width: 92vw;
+  margin: 0;
+  margin-left: -1vw;
+}
+.main__title span:nth-last-child(1) {
+  margin-left: 2.8vw;
+}
+.main__bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-left: 5.2vw;
+  margin-top: 2.6vw;
+}
+.main__black {
+  background-color: black;
+  padding: 3.8vw 3.8vw 4vw 4.2vw;
+  background: url("../img/square.svg") no-repeat black 90% 20%;
+  background-size: 6.5vw 6.5vw;
+  height: 10.5vw;
+  width: 31.1vw;
+}
+.main__paragraph {
+  color: white;
+  margin-top: 0;
+  font-size: 1.3vw;
+  max-width: 31.1vw;
+  font-family: "Gilroy-Light";
+  margin-bottom: 2.4vw;
+  z-index: 1;
+}
+.main__button {
+  background-color: #DA1648;
+  border-radius: 35px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  height: 2.6vw;
+  width: 14.1vw;
+  text-align: center;
+  color: white;
+  font-family: "Gilroy-Regular";
+  font-size: 0.9vw;
+}
+.main__square {
+  position: absolute;
+  top: 15%;
+  right: 8%;
+  z-index: -1;
+}
+.main__logo-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+.main__logo-block svg {
+  height: 2.8vw;
+  max-width: 9.9vw;
+}
+.main__border-top {
+  border-top: 1px #E9E9E9 solid;
+  margin-top: 2.1vw;
+  margin-bottom: 2.2vw;
+}
+.main__border-bottom {
+  border-top: 1px #E9E9E9 solid;
+  margin-top: 2.9vw;
+  width: 31.5vw;
+}
+
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url("../fonts/Gilroy-Regular.ttf");
+}
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url("../fonts/Gilroy-Medium.ttf");
+}
+@font-face {
+  font-family: "Gilroy-Light";
+  src: url("../fonts/Gilroy-Light.ttf");
+}
+@font-face {
+  font-family: "Gilroy-Heavy";
+  src: url("../fonts/Gilroy-Heavy.ttf");
+}
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("../fonts/Gilroy-Bold.ttf");
+}
+.bottom {
+  height: 9.4vw;
+  display: flex;
+  align-items: center;
+}
+.bottom__border {
+  border-top: 1px #E9E9E9 solid;
+  margin-top: 4vw;
+}
+.bottom svg {
+  margin: 0px 4.6vw;
+  max-height: 2vw;
+  max-width: 9.3vw;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0%;
+  width: 96.2vw;
+  right: 0%;
+}
+.header__left-block {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 6.3vw;
+}
+.header__right-block {
+  display: flex;
+  align-items: center;
+}
+.header__left-border {
+  border-left: 1px #E9E9E9 solid;
+  height: 6.9vw;
+}
+.header__logo {
+  font-size: 1.9vw;
+  font-family: "Gilroy-Bold";
+  margin-left: 2.1vw;
+  margin-right: 2.1vw;
+}
+.header__right-border {
+  border-left: 1px #E9E9E9 solid;
+  height: 5.3vw;
+}
+.header__description {
+  font-size: 0.8vw;
+  font-family: "Gilroy-Regular";
+  margin-left: 1.8vw;
+}
+.header__links {
+  color: black;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin: 0px 1.6vw;
+  text-decoration: none;
+  font-family: "Gilroy-Medium";
+  font-size: 0.8vw;
+}
+.header__links:visited {
+  color: black;
+  text-decoration: none;
+}
+.header__contact-us {
+  border: 0.1vw black solid;
+  background-color: white;
+  border-radius: 35px;
+  width: 11.5vw;
+  height: 2.2vw;
+  margin: 0px 1.5vw;
+  font-family: "Gilroy-Regular";
+  font-size: 0.7vw;
+}
+.header__line-block {
+  width: 1.5vw;
+  height: 0.6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0px 1.6vw;
+}
+.header__border-top {
+  width: 1.5vw;
+  border-top: 0.15vw black solid;
+}
+.header__border-bottom {
+  width: 0.8vw;
+  border-bottom: 0.15vw black solid;
+}
+.header__right-line {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.header__horizontal-line {
+  width: 4.5vw;
+  border-top: 1px #E9E9E9 solid;
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+/*# sourceMappingURL=style.css.map */
