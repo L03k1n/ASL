@@ -23,7 +23,7 @@ var path = {
 };
 
 var gulp = require('gulp'),
-
+pxToRem = require('gulp-px2rem-converter'),
 		sass = require('gulp-sass')(require('sass')), 
 		autoprefixer = require('autoprefixer'), 
 		postcss = require('gulp-postcss'),
@@ -54,6 +54,7 @@ gulp.task('sass', function (cb) {
 	.pipe(sourcemaps.init()) 
 	.pipe(sass()) 
 	.pipe(sourcemaps.write('./'))
+	.pipe(pxToRem())
 	.pipe(gulp.dest(path.dist.css)) 
 	.pipe(browserSync.stream());
 	cb();
@@ -65,6 +66,7 @@ gulp.task('sass:build', function (cb) {
 	.pipe(sass()) 
 	.pipe(postcss([autoprefixer()]))
 	.pipe(cleanCSS()) 
+	.pipe(pxToRem())
 	.pipe(gulp.dest(path.dist.css));  
 	cb();
 });
